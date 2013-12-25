@@ -21,7 +21,7 @@ int main()
 	ifstream fin("friday.in");
 	ofstream fout("friday.out");
 	int count[DAYS]={};
-	int start = 1;	
+	int start = 1;	 //1900年一月一日为星期一 
 	int N;
 	int totalMonth;    //一共有多少个月 
 	int year, month;    //记录当前年份和月份 

@@ -14,7 +14,7 @@ LANG: C++
 
 using namespace std;
 bool isPalindrome(string num);
-string represent(int num, int base);
+string convert(int num, int base);
 const char ch[20] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J'};
 int main()
 {
@@ -26,9 +26,9 @@ int main()
 	fin >> base;
 	for(int i = 1; i <= N; ++i)
 	{
-		square = represent(i*i, base);
+		square = convert(i*i, base);
 		if(isPalindrome(square))
-			fout << represent(i, base) << " " << square << endl;
+			fout << convert(i, base) << " " << square << endl;
 	}
 	fin.close();
 	fout.close();
@@ -46,7 +46,7 @@ bool isPalindrome(string num)
 	return true;
 }
 
-string represent(int num, int base)
+string convert(int num, int base)
 {
 	string result="";
 	int tmp;

@@ -15,8 +15,6 @@ LANG: C++
 
 using namespace std;
 
-const char ch[10] = {'0','1','2','3','4','5','6','7','8','9'}; 
-
 bool isPalindrome(string num);
 string convert(int num, int base);
 
@@ -65,6 +63,7 @@ bool isPalindrome(string num)
 
 string convert(int num, int base)
 {
+	const char ch[10] = {'0','1','2','3','4','5','6','7','8','9'}; 
 	string result="";
 	int tmp;
 	while(num!=0)

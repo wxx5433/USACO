@@ -75,6 +75,10 @@ Interval findLongestPal(const char str[], int len)
 	for(int i = 1; i < len - 1; ++i)  //首尾的'#'符号不用遍历 
 	{
 		int iMirror = 2*C-i;  //i关于中心点C的镜像
+		/*
+		原文中把下面的if else语句直接用P[i] = (R > i) ? min(R-i, P[i_mirror]) : 0;替代
+		但是我觉得展开写更容易理解一点 
+		*/
 		if(R <= i)
 			P[i] = 0;  //暂时记为0，因为无法从之前的最长回文子串中获得信息，之后的while循环继续扩展  
 		else

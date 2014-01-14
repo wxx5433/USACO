@@ -35,7 +35,7 @@ void search()
 	result.push_back(0);
 	count++;
 	output(fout, 0,count);
-	int upperBound = 1 << (len+1);	
+	int upperBound = 1 << len;	
 	for(int num = 1; num < upperBound; ++num)  //从小到大枚举 
 	{
 		if(checkDistance(num))  //如果满足Hamming Distance条件则记录下来并输出 
